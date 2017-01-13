@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">StockApp</string>
+    <string name="common_font_size">18dp</string>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/stock_name"
+            android:text="远光软件\n002063"
+            android:textAlignment="center"
+            android:textColor="@color/stockWhiteDay"
+            android:textSize="16dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/current_price"
+            android:text="11.74\n0.09%"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textColor="@color/stockRedDay"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/buy_price"
+            android:text="11.74\n0.09%"
+            android:textColor="@color/stockGreenDay"
+            android:textAlignment="center"
+            android:textSize="16dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/sell_price"
+            android:text="11.74\n0.09%"
+            android:textColor="@color/stockRedDay"
+            android:textAlignment="center"
+            android:textSize="16dp"/>
+    </LinearLayout>
+    <View
+        android:layout_height="1dp"
+        android:layout_margin="1dp"
+        android:layout_width="match_parent"
+        android:background="@android:color/darker_gray"/>
+
+</LinearLayout>
