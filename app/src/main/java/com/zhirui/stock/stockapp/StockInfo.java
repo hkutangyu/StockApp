@@ -25,6 +25,10 @@ public class StockInfo {
         this.sellPercent = sellPercent;
         this.sellPrice = sellPrice;
     }
+
+    public StockInfo(String stockCode){
+        this.stockCode = stockCode;
+    }
     public String getStockName() {
         return stockName;
     }

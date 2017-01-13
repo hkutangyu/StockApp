@@ -18,16 +18,16 @@ import java.util.List;
 public class StockInfoAdapter extends RecyclerView.Adapter<StockInfoAdapter.ViewHolder>{
 
     private List<StockInfo> mStockList;
-    private RecyclerItemChangedListener listener;
+    private ItemDeletedListener listener;
     ViewGroup parent = null;
 
-    public StockInfoAdapter(List<StockInfo> mStockList, RecyclerItemChangedListener listener) {
+    public StockInfoAdapter(List<StockInfo> mStockList, ItemDeletedListener listener) {
         this.mStockList = mStockList;
         this.listener = listener;
     }
 
-    public interface RecyclerItemChangedListener{
-        void RecyclerItemChanged(int position);
+    public interface ItemDeletedListener {
+        void ItemDeleted(int position);
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder{
@@ -61,9 +61,9 @@ public class StockInfoAdapter extends RecyclerView.Adapter<StockInfoAdapter.View
                     public boolean onMenuItemClick(MenuItem item) {
                         Toast.makeText(parent.getContext(),"删除成功",Toast.LENGTH_SHORT).show();
                         int pos = holder.getAdapterPosition();
-                        listener.RecyclerItemChanged(pos);
-                        mStockList.remove(pos);
-                        notifyDataSetChanged();
+                        //mStockList.remove(pos);
+                        listener.ItemDeleted(pos);
+                        //notifyDataSetChanged();
                         return false;
                     }
                 });
